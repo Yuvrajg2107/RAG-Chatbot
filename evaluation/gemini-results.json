@@ -1,0 +1,765 @@
+{
+  "timestamp_utc": "2026-10-29T11:14:15.695422+00:00",
+  "corpus": "Fictional Northstar development fixtures; not a held-out benchmark.",
+  "dataset_sha256": "b9bd84c49130db877aa28d0b1f65b126999aafc6042b9e32ec562356a29229b4",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "threshold": 0.62,
+  "mode": "gemini",
+  "generation_model": "gemini-3.5-flash-lite",
+  "summary": {
+    "questions": 24,
+    "supported_questions": 18,
+    "unanswerable_questions": 6,
+    "supported_retrieval_hits_at_5": 18,
+    "retrieval_recall_at_5": 1.0,
+    "unknown_questions_with_no_retrieval": 5,
+    "generation_checks_passed": 24,
+    "generation_checks_run": 24
+  },
+  "limitations": [
+    "Local mode returns exact passages and does not decide semantic answerability when evidence is retrieved.",
+    "Cosine similarity is not a confidence probability. A related passage may not answer the question.",
+    "Generated checks use phrase matching plus source/page checks, not an independent factuality judge.",
+    "Quotes and source IDs are validated; this does not prove that a generated claim follows from its quote."
+  ],
+  "results": [
+    {
+      "id": "q01",
+      "question": "How long is the Applied AI certificate?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 1,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 1,
+          "score": 0.8136
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.6845
+        },
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 3,
+          "score": 0.653
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.622
+        }
+      ],
+      "answer": "The Applied AI certificate lasts 12 weeks. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "2540be2a-cb86-4840-992b-2bb1fdfe08ca",
+          "filename": "student-handbook.pdf",
+          "page": 1,
+          "quote": "The Applied AI certificate lasts 12 weeks.",
+          "score": 0.8136
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q02",
+      "question": "What attendance is needed to qualify for the certificate?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 1,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 1,
+          "score": 0.7061
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.6416
+        }
+      ],
+      "answer": "Students must attend at least 80 percent of scheduled classes to qualify for the certificate. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "2540be2a-cb86-4840-992b-2bb1fdfe08ca",
+          "filename": "student-handbook.pdf",
+          "page": 1,
+          "quote": "Students must attend at least 80 percent of scheduled classes to qualify for the certificate.",
+          "score": 0.7061
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q03",
+      "question": "When does enrollment close?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 1,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 1,
+          "score": 0.6908
+        }
+      ],
+      "answer": "Enrollment closes on July 24, 2026. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "2540be2a-cb86-4840-992b-2bb1fdfe08ca",
+          "filename": "student-handbook.pdf",
+          "page": 1,
+          "quote": "Enrollment closes on 24 July 2026.",
+          "score": 0.6908
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q04",
+      "question": "How much of the final grade is the capstone worth?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 2,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.6889
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.6793
+        }
+      ],
+      "answer": "The capstone project is worth 50 percent of the final grade. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "2540be2a-cb86-4840-992b-2bb1fdfe08ca",
+          "filename": "student-handbook.pdf",
+          "page": 2,
+          "quote": "a capstone project worth 50 percent, and participation worth 10 percent of the final grade.",
+          "score": 0.6889
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q05",
+      "question": "What is the minimum passing grade?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 2,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.6664
+        }
+      ],
+      "answer": "The minimum final grade required to pass is 60 percent. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "2540be2a-cb86-4840-992b-2bb1fdfe08ca",
+          "filename": "student-handbook.pdf",
+          "page": 2,
+          "quote": "Students need a final grade of at least 60 percent to pass.",
+          "score": 0.6664
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q06",
+      "question": "When must an assignment extension be requested?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 2,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.743
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.6825
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 3,
+          "score": 0.6393
+        }
+      ],
+      "answer": "An assignment extension must be requested at least 48 hours before the deadline. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "2540be2a-cb86-4840-992b-2bb1fdfe08ca",
+          "filename": "student-handbook.pdf",
+          "page": 2,
+          "quote": "An extension must be requested at least 48 hours before the deadline.",
+          "score": 0.743
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q07",
+      "question": "When is the capstone submission deadline?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 3,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.8442
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.7055
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 1,
+          "score": 0.6508
+        }
+      ],
+      "answer": "The capstone submission deadline is 23 October 2026 at 5:00 PM. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "2540be2a-cb86-4840-992b-2bb1fdfe08ca",
+          "filename": "student-handbook.pdf",
+          "page": 3,
+          "quote": "The capstone submission deadline is 23 October 2026 at 5:00 PM.",
+          "score": 0.8442
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q08",
+      "question": "How many students can be on a capstone team?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 3,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.7112
+        }
+      ],
+      "answer": "Teams may contain between one and three students. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "2540be2a-cb86-4840-992b-2bb1fdfe08ca",
+          "filename": "student-handbook.pdf",
+          "page": 3,
+          "quote": "Teams may contain between one and three students.",
+          "score": 0.7112
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q09",
+      "question": "How long can the capstone demonstration video be?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 3,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.7651
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 1,
+          "score": 0.629
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.6285
+        }
+      ],
+      "answer": "The capstone demonstration video must be no longer than 5 minutes. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "2540be2a-cb86-4840-992b-2bb1fdfe08ca",
+          "filename": "student-handbook.pdf",
+          "page": 3,
+          "quote": "Every capstone submission must include a source-code repository, a README with setup instructions, an evaluation report, and a demonstration video no longer than 5 minutes.",
+          "score": 0.7651
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q10",
+      "question": "What are the research lab opening hours?",
+      "expected_answerable": true,
+      "expected_file": "research-lab-policy.pdf",
+      "expected_page": 1,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 1,
+          "score": 0.7331
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 2,
+          "score": 0.6558
+        },
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 2,
+          "score": 0.6417
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 3,
+          "score": 0.6313
+        }
+      ],
+      "answer": "The research lab opens Monday through Friday from 9:00 AM to 7:00 PM. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "3f9cec39-36c6-4752-9e10-0906658c28e5",
+          "filename": "research-lab-policy.pdf",
+          "page": 1,
+          "quote": "The research lab opens Monday through Friday from 9:00 AM to 7:00 PM.",
+          "score": 0.7331
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q11",
+      "question": "Where is the lab emergency assembly point?",
+      "expected_answerable": true,
+      "expected_file": "research-lab-policy.pdf",
+      "expected_page": 1,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 1,
+          "score": 0.7175
+        }
+      ],
+      "answer": "The lab emergency assembly point is the east courtyard. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "3f9cec39-36c6-4752-9e10-0906658c28e5",
+          "filename": "research-lab-policy.pdf",
+          "page": 1,
+          "quote": "The emergency assembly point is the east courtyard.",
+          "score": 0.7175
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q12",
+      "question": "How many GPU hours does each student get monthly?",
+      "expected_answerable": true,
+      "expected_file": "research-lab-policy.pdf",
+      "expected_page": 2,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 2,
+          "score": 0.7681
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 2,
+          "score": 0.6236
+        }
+      ],
+      "answer": "Each student receives a monthly compute budget of 20 GPU hours. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "3f9cec39-36c6-4752-9e10-0906658c28e5",
+          "filename": "research-lab-policy.pdf",
+          "page": 2,
+          "quote": "Each student receives a monthly compute budget of 20 GPU hours.",
+          "score": 0.7681
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q13",
+      "question": "What is the maximum duration of a GPU session?",
+      "expected_answerable": true,
+      "expected_file": "research-lab-policy.pdf",
+      "expected_page": 2,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 2,
+          "score": 0.811
+        }
+      ],
+      "answer": "The maximum duration of a GPU session is 4 hours. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "3f9cec39-36c6-4752-9e10-0906658c28e5",
+          "filename": "research-lab-policy.pdf",
+          "page": 2,
+          "quote": "GPU sessions have a maximum duration of 4 hours.",
+          "score": 0.811
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q14",
+      "question": "How long is project research data retained?",
+      "expected_answerable": true,
+      "expected_file": "research-lab-policy.pdf",
+      "expected_page": 3,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 3,
+          "score": 0.8518
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.7024
+        },
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 2,
+          "score": 0.6689
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 3,
+          "score": 0.6641
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.64
+        }
+      ],
+      "answer": "Project data is retained for 90 days after project completion and then deleted. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "3f9cec39-36c6-4752-9e10-0906658c28e5",
+          "filename": "research-lab-policy.pdf",
+          "page": 3,
+          "quote": "Project data is retained for 90 days after project completion and then deleted.",
+          "score": 0.8518
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q15",
+      "question": "Can confidential research data be sent to external AI APIs?",
+      "expected_answerable": true,
+      "expected_file": "research-lab-policy.pdf",
+      "expected_page": 3,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 3,
+          "score": 0.7467
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.6522
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 3,
+          "score": 0.6411
+        }
+      ],
+      "answer": "Confidential research data cannot be sent to external AI APIs without receiving written authorization from the data owner. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "3f9cec39-36c6-4752-9e10-0906658c28e5",
+          "filename": "research-lab-policy.pdf",
+          "page": 3,
+          "quote": "Confidential research data must not be sent to external AI APIs without written authorization from the data owner.",
+          "score": 0.7467
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q16",
+      "question": "How many library books can a student borrow?",
+      "expected_answerable": true,
+      "expected_file": "library-guide.pdf",
+      "expected_page": 1,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "library-guide.pdf",
+          "page": 1,
+          "score": 0.7543
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 3,
+          "score": 0.6632
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 2,
+          "score": 0.6457
+        }
+      ],
+      "answer": "A student can borrow up to 5 library books at a time. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "4563acca-7026-4a97-8734-1561d4452d09",
+          "filename": "library-guide.pdf",
+          "page": 1,
+          "quote": "Students may borrow up to 5 books at a time.",
+          "score": 0.7543
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q17",
+      "question": "How long can a group study room be booked per day?",
+      "expected_answerable": true,
+      "expected_file": "library-guide.pdf",
+      "expected_page": 2,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "library-guide.pdf",
+          "page": 2,
+          "score": 0.867
+        },
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 2,
+          "score": 0.6932
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 1,
+          "score": 0.651
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 3,
+          "score": 0.6428
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.6289
+        }
+      ],
+      "answer": "A group study room can be booked for up to 2 hours per day. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "4563acca-7026-4a97-8734-1561d4452d09",
+          "filename": "library-guide.pdf",
+          "page": 2,
+          "quote": "Group study rooms can be booked for up to 2 hours per day.",
+          "score": 0.867
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q18",
+      "question": "What is required to access digital journals off campus?",
+      "expected_answerable": true,
+      "expected_file": "library-guide.pdf",
+      "expected_page": 3,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "library-guide.pdf",
+          "page": 3,
+          "score": 0.7521
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 2,
+          "score": 0.6495
+        },
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 3,
+          "score": 0.6375
+        },
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 1,
+          "score": 0.6253
+        }
+      ],
+      "answer": "Off-campus access to digital journals requires an institute account and multi-factor authentication. [1]",
+      "answerable": true,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "4563acca-7026-4a97-8734-1561d4452d09",
+          "filename": "library-guide.pdf",
+          "page": 3,
+          "quote": "Off-campus access to digital journals requires an institute account and multi-factor authentication.",
+          "score": 0.7521
+        }
+      ],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q19",
+      "question": "What is the cafeteria menu for next Tuesday?",
+      "expected_answerable": false,
+      "expected_file": null,
+      "expected_page": null,
+      "retrieval_hit_at_5": null,
+      "retrieved": [],
+      "answer": "I couldn't find enough evidence in the selected documents to answer that question.",
+      "answerable": false,
+      "citations": [],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q20",
+      "question": "Who won the football world cup in 2018?",
+      "expected_answerable": false,
+      "expected_file": null,
+      "expected_page": null,
+      "retrieval_hit_at_5": null,
+      "retrieved": [],
+      "answer": "I couldn't find enough evidence in the selected documents to answer that question.",
+      "answerable": false,
+      "citations": [],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q21",
+      "question": "What is the campus parking permit price?",
+      "expected_answerable": false,
+      "expected_file": null,
+      "expected_page": null,
+      "retrieval_hit_at_5": null,
+      "retrieved": [],
+      "answer": "I couldn't find enough evidence in the selected documents to answer that question.",
+      "answerable": false,
+      "citations": [],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q22",
+      "question": "What brand of GPU does the research lab use?",
+      "expected_answerable": false,
+      "expected_file": null,
+      "expected_page": null,
+      "retrieval_hit_at_5": null,
+      "retrieved": [
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 2,
+          "score": 0.7105
+        }
+      ],
+      "answer": "I couldn't find enough evidence in the selected documents to answer that question.",
+      "answerable": false,
+      "citations": [],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q23",
+      "question": "What is the librarian's personal phone number?",
+      "expected_answerable": false,
+      "expected_file": null,
+      "expected_page": null,
+      "retrieval_hit_at_5": null,
+      "retrieved": [],
+      "answer": "I couldn't find enough evidence in the selected documents to answer that question.",
+      "answerable": false,
+      "citations": [],
+      "generation_check_passed": true
+    },
+    {
+      "id": "q24",
+      "question": "What scholarship amount is available for the certificate?",
+      "expected_answerable": false,
+      "expected_file": null,
+      "expected_page": null,
+      "retrieval_hit_at_5": null,
+      "retrieved": [],
+      "answer": "I couldn't find enough evidence in the selected documents to answer that question.",
+      "answerable": false,
+      "citations": [],
+      "generation_check_passed": true
+    }
+  ]
+}

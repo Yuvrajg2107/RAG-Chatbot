@@ -1,0 +1,11 @@
+{
+  "checks": 20,
+  "errors": [],
+  "screenshots": "C:/RAG-Chatbot/docs/screenshots/hosted",
+  "viewports": [
+    1440,
+    820,
+    390
+  ],
+  "base": "https://margin-rag.vercel.app"
+}

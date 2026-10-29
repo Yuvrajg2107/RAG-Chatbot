@@ -1,0 +1,15 @@
+.venv/
+.env*
+!.env.example
+.vercel/
+.model-cache/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+data/
+.cache/
+artifacts/browser/
+*.log
+*.pyc
+dist/
+artifacts/ocr*

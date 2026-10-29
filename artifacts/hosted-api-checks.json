@@ -1,0 +1,12 @@
+{
+  "base_url": "https://margin-rag.vercel.app",
+  "redeployment_persistence": true,
+  "documents_retained": 3,
+  "workspace_isolation_checks": 4,
+  "cited_answer_after_redeployment": true,
+  "mode": "extractive",
+  "gemini_generation": "blocked by prepaid credits; key not deployed",
+  "hosted_3mb_upload_limit": true,
+  "cross_origin_rejection": true,
+  "private_path_404_checks": 5
+}

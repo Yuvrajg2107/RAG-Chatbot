@@ -1,0 +1,12 @@
+{
+  "base_url": "https://margin-rag.vercel.app",
+  "mode": "gemini",
+  "checks": 13,
+  "errors": [],
+  "screenshots": "C:/RAG-Chatbot/docs/screenshots/gemini",
+  "scenarios": [
+    "generated_answer_with_page_3_citation",
+    "mobile_source_modal",
+    "unsupported_gpu_brand_refusal"
+  ]
+}

@@ -1,0 +1,774 @@
+{
+  "timestamp_utc": "2026-10-29T10:36:49.591266+00:00",
+  "corpus": "Fictional Northstar development fixtures; not a held-out benchmark.",
+  "dataset_sha256": "b9bd84c49130db877aa28d0b1f65b126999aafc6042b9e32ec562356a29229b4",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "threshold": 0.62,
+  "mode": "local-evidence",
+  "generation_model": null,
+  "summary": {
+    "questions": 24,
+    "supported_questions": 18,
+    "unanswerable_questions": 6,
+    "supported_retrieval_hits_at_5": 18,
+    "retrieval_recall_at_5": 1.0,
+    "unknown_questions_with_no_retrieval": 5,
+    "generation_checks_passed": null,
+    "generation_checks_run": 0
+  },
+  "limitations": [
+    "Local mode returns exact passages and does not decide semantic answerability when evidence is retrieved.",
+    "Cosine similarity is not a confidence probability. A related passage may not answer the question.",
+    "Generated checks use phrase matching plus source/page checks, not an independent factuality judge.",
+    "Quotes and source IDs are validated; this does not prove that a generated claim follows from its quote."
+  ],
+  "results": [
+    {
+      "id": "q01",
+      "question": "How long is the Applied AI certificate?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 1,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 1,
+          "score": 0.8136
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.6845
+        },
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 3,
+          "score": 0.653
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.622
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Enrollment & attendance Northstar Learning Institute | Fictional demonstration handbook | 2026 edition. The Applied AI certificate lasts 12 weeks. Teaching begins on 3 August 2026. Classes meet on Mondays and Wednesdays from 6:00 PM to 8:00 PM. Students must attend at least 80 percent of scheduled classes to qualify for the certificate. Absences should be reported to the program coordinator by email before the session. Enrollment closes on 24 July 2026. Applicants must complete the Python foundations module before enrollment. The cohort is limited to 30 students. Fictional sample · Page 1 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "106e7c73-7762-4964-89bd-e05000c6a920",
+          "filename": "student-handbook.pdf",
+          "page": 1,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Enrollment & attendance Northstar Learning Institute | Fictional demonstration handbook | 2026 edition. The Applied AI certificate lasts 12 weeks. Teaching begins on 3 August 2026. Classes meet on Mondays and Wednesdays from 6:00 PM to 8:00 PM. Students must attend at least 80 percent of scheduled classes to qualify for the certificate. Absences should be reported to the program coordinator by email before the session. Enrollment closes on 24 July 2026. Applicants must complete the Python foundations module before enrollment. The cohort is limited to 30 students. Fictional sample · Page 1 · Not an official policy",
+          "score": 0.8136
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q02",
+      "question": "What attendance is needed to qualify for the certificate?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 1,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 1,
+          "score": 0.7061
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.6416
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Enrollment & attendance Northstar Learning Institute | Fictional demonstration handbook | 2026 edition. The Applied AI certificate lasts 12 weeks. Teaching begins on 3 August 2026. Classes meet on Mondays and Wednesdays from 6:00 PM to 8:00 PM. Students must attend at least 80 percent of scheduled classes to qualify for the certificate. Absences should be reported to the program coordinator by email before the session. Enrollment closes on 24 July 2026. Applicants must complete the Python foundations module before enrollment. The cohort is limited to 30 students. Fictional sample · Page 1 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "106e7c73-7762-4964-89bd-e05000c6a920",
+          "filename": "student-handbook.pdf",
+          "page": 1,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Enrollment & attendance Northstar Learning Institute | Fictional demonstration handbook | 2026 edition. The Applied AI certificate lasts 12 weeks. Teaching begins on 3 August 2026. Classes meet on Mondays and Wednesdays from 6:00 PM to 8:00 PM. Students must attend at least 80 percent of scheduled classes to qualify for the certificate. Absences should be reported to the program coordinator by email before the session. Enrollment closes on 24 July 2026. Applicants must complete the Python foundations module before enrollment. The cohort is limited to 30 students. Fictional sample · Page 1 · Not an official policy",
+          "score": 0.7061
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q03",
+      "question": "When does enrollment close?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 1,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 1,
+          "score": 0.6908
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Enrollment & attendance Northstar Learning Institute | Fictional demonstration handbook | 2026 edition. The Applied AI certificate lasts 12 weeks. Teaching begins on 3 August 2026. Classes meet on Mondays and Wednesdays from 6:00 PM to 8:00 PM. Students must attend at least 80 percent of scheduled classes to qualify for the certificate. Absences should be reported to the program coordinator by email before the session. Enrollment closes on 24 July 2026. Applicants must complete the Python foundations module before enrollment. The cohort is limited to 30 students. Fictional sample · Page 1 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "106e7c73-7762-4964-89bd-e05000c6a920",
+          "filename": "student-handbook.pdf",
+          "page": 1,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Enrollment & attendance Northstar Learning Institute | Fictional demonstration handbook | 2026 edition. The Applied AI certificate lasts 12 weeks. Teaching begins on 3 August 2026. Classes meet on Mondays and Wednesdays from 6:00 PM to 8:00 PM. Students must attend at least 80 percent of scheduled classes to qualify for the certificate. Absences should be reported to the program coordinator by email before the session. Enrollment closes on 24 July 2026. Applicants must complete the Python foundations module before enrollment. The cohort is limited to 30 students. Fictional sample · Page 1 · Not an official policy",
+          "score": 0.6908
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q04",
+      "question": "How much of the final grade is the capstone worth?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 2,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.6889
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.6793
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Assessment & extensions Assessment consists of weekly assignments worth 40 percent, a capstone project worth 50 percent, and participation worth 10 percent of the final grade. Students need a final grade of at least 60 percent to pass. Weekly assignments are due every Sunday at 11:59 PM in the institute's local time. A late assignment loses 5 percentage points per day and is not accepted after 3 days. An extension must be requested at least 48 hours before the deadline. Approved medical absences are exempt from the late penalty. Fictional sample · Page 2 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "106e7c73-7762-4964-89bd-e05000c6a920",
+          "filename": "student-handbook.pdf",
+          "page": 2,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Assessment & extensions Assessment consists of weekly assignments worth 40 percent, a capstone project worth 50 percent, and participation worth 10 percent of the final grade. Students need a final grade of at least 60 percent to pass. Weekly assignments are due every Sunday at 11:59 PM in the institute's local time. A late assignment loses 5 percentage points per day and is not accepted after 3 days. An extension must be requested at least 48 hours before the deadline. Approved medical absences are exempt from the late penalty. Fictional sample · Page 2 · Not an official policy",
+          "score": 0.6889
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q05",
+      "question": "What is the minimum passing grade?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 2,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.6664
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Assessment & extensions Assessment consists of weekly assignments worth 40 percent, a capstone project worth 50 percent, and participation worth 10 percent of the final grade. Students need a final grade of at least 60 percent to pass. Weekly assignments are due every Sunday at 11:59 PM in the institute's local time. A late assignment loses 5 percentage points per day and is not accepted after 3 days. An extension must be requested at least 48 hours before the deadline. Approved medical absences are exempt from the late penalty. Fictional sample · Page 2 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "106e7c73-7762-4964-89bd-e05000c6a920",
+          "filename": "student-handbook.pdf",
+          "page": 2,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Assessment & extensions Assessment consists of weekly assignments worth 40 percent, a capstone project worth 50 percent, and participation worth 10 percent of the final grade. Students need a final grade of at least 60 percent to pass. Weekly assignments are due every Sunday at 11:59 PM in the institute's local time. A late assignment loses 5 percentage points per day and is not accepted after 3 days. An extension must be requested at least 48 hours before the deadline. Approved medical absences are exempt from the late penalty. Fictional sample · Page 2 · Not an official policy",
+          "score": 0.6664
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q06",
+      "question": "When must an assignment extension be requested?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 2,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.743
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.6825
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 3,
+          "score": 0.6393
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Assessment & extensions Assessment consists of weekly assignments worth 40 percent, a capstone project worth 50 percent, and participation worth 10 percent of the final grade. Students need a final grade of at least 60 percent to pass. Weekly assignments are due every Sunday at 11:59 PM in the institute's local time. A late assignment loses 5 percentage points per day and is not accepted after 3 days. An extension must be requested at least 48 hours before the deadline. Approved medical absences are exempt from the late penalty. Fictional sample · Page 2 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "106e7c73-7762-4964-89bd-e05000c6a920",
+          "filename": "student-handbook.pdf",
+          "page": 2,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Assessment & extensions Assessment consists of weekly assignments worth 40 percent, a capstone project worth 50 percent, and participation worth 10 percent of the final grade. Students need a final grade of at least 60 percent to pass. Weekly assignments are due every Sunday at 11:59 PM in the institute's local time. A late assignment loses 5 percentage points per day and is not accepted after 3 days. An extension must be requested at least 48 hours before the deadline. Approved medical absences are exempt from the late penalty. Fictional sample · Page 2 · Not an official policy",
+          "score": 0.743
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q07",
+      "question": "When is the capstone submission deadline?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 3,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.8442
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.7055
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 1,
+          "score": 0.6508
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Capstone & academic integrity The capstone submission deadline is 23 October 2026 at 5:00 PM. Teams may contain between one and three students. Every capstone submission must include a source-code repository, a README with setup instructions, an evaluation report, and a demonstration video no longer than 5 minutes. Students may use AI tools but must disclose their use in the README. All external datasets and code must be attributed. Fabricated evaluation results are prohibited. The final presentation is 10 minutes long, followed by 5 minutes of questions. Projects are assessed on correctness, evidence quality, usability, and the team's explanation of limitations. Fictional sample · Page 3 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "106e7c73-7762-4964-89bd-e05000c6a920",
+          "filename": "student-handbook.pdf",
+          "page": 3,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Capstone & academic integrity The capstone submission deadline is 23 October 2026 at 5:00 PM. Teams may contain between one and three students. Every capstone submission must include a source-code repository, a README with setup instructions, an evaluation report, and a demonstration video no longer than 5 minutes. Students may use AI tools but must disclose their use in the README. All external datasets and code must be attributed. Fabricated evaluation results are prohibited. The final presentation is 10 minutes long, followed by 5 minutes of questions. Projects are assessed on correctness, evidence quality, usability, and the team's explanation of limitations. Fictional sample · Page 3 · Not an official policy",
+          "score": 0.8442
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q08",
+      "question": "How many students can be on a capstone team?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 3,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.7112
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Capstone & academic integrity The capstone submission deadline is 23 October 2026 at 5:00 PM. Teams may contain between one and three students. Every capstone submission must include a source-code repository, a README with setup instructions, an evaluation report, and a demonstration video no longer than 5 minutes. Students may use AI tools but must disclose their use in the README. All external datasets and code must be attributed. Fabricated evaluation results are prohibited. The final presentation is 10 minutes long, followed by 5 minutes of questions. Projects are assessed on correctness, evidence quality, usability, and the team's explanation of limitations. Fictional sample · Page 3 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "106e7c73-7762-4964-89bd-e05000c6a920",
+          "filename": "student-handbook.pdf",
+          "page": 3,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Capstone & academic integrity The capstone submission deadline is 23 October 2026 at 5:00 PM. Teams may contain between one and three students. Every capstone submission must include a source-code repository, a README with setup instructions, an evaluation report, and a demonstration video no longer than 5 minutes. Students may use AI tools but must disclose their use in the README. All external datasets and code must be attributed. Fabricated evaluation results are prohibited. The final presentation is 10 minutes long, followed by 5 minutes of questions. Projects are assessed on correctness, evidence quality, usability, and the team's explanation of limitations. Fictional sample · Page 3 · Not an official policy",
+          "score": 0.7112
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q09",
+      "question": "How long can the capstone demonstration video be?",
+      "expected_answerable": true,
+      "expected_file": "student-handbook.pdf",
+      "expected_page": 3,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.7651
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 1,
+          "score": 0.629
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.6285
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Capstone & academic integrity The capstone submission deadline is 23 October 2026 at 5:00 PM. Teams may contain between one and three students. Every capstone submission must include a source-code repository, a README with setup instructions, an evaluation report, and a demonstration video no longer than 5 minutes. Students may use AI tools but must disclose their use in the README. All external datasets and code must be attributed. Fabricated evaluation results are prohibited. The final presentation is 10 minutes long, followed by 5 minutes of questions. Projects are assessed on correctness, evidence quality, usability, and the team's explanation of limitations. Fictional sample · Page 3 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "106e7c73-7762-4964-89bd-e05000c6a920",
+          "filename": "student-handbook.pdf",
+          "page": 3,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Capstone & academic integrity The capstone submission deadline is 23 October 2026 at 5:00 PM. Teams may contain between one and three students. Every capstone submission must include a source-code repository, a README with setup instructions, an evaluation report, and a demonstration video no longer than 5 minutes. Students may use AI tools but must disclose their use in the README. All external datasets and code must be attributed. Fabricated evaluation results are prohibited. The final presentation is 10 minutes long, followed by 5 minutes of questions. Projects are assessed on correctness, evidence quality, usability, and the team's explanation of limitations. Fictional sample · Page 3 · Not an official policy",
+          "score": 0.7651
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q10",
+      "question": "What are the research lab opening hours?",
+      "expected_answerable": true,
+      "expected_file": "research-lab-policy.pdf",
+      "expected_page": 1,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 1,
+          "score": 0.7331
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 2,
+          "score": 0.6558
+        },
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 2,
+          "score": 0.6417
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 3,
+          "score": 0.6313
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Lab access & safety Northstar Research Lab | Fictional demonstration policy | Version 1.2. The research lab opens Monday through Friday from 9:00 AM to 7:00 PM. Weekend access requires written approval from the lab manager. Before entering the lab, students must complete the safety orientation and register their institute ID card. Visitors must be accompanied by a registered lab member. Food and open drinks are not permitted near workstations. Report equipment faults to the lab manager; do not attempt electrical repairs. The emergency assembly point is the east courtyard. Fictional sample · Page 1 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "ca44a4d7-8836-49b0-80c0-a3b22e73cc97",
+          "filename": "research-lab-policy.pdf",
+          "page": 1,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Lab access & safety Northstar Research Lab | Fictional demonstration policy | Version 1.2. The research lab opens Monday through Friday from 9:00 AM to 7:00 PM. Weekend access requires written approval from the lab manager. Before entering the lab, students must complete the safety orientation and register their institute ID card. Visitors must be accompanied by a registered lab member. Food and open drinks are not permitted near workstations. Report equipment faults to the lab manager; do not attempt electrical repairs. The emergency assembly point is the east courtyard. Fictional sample · Page 1 · Not an official policy",
+          "score": 0.7331
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q11",
+      "question": "Where is the lab emergency assembly point?",
+      "expected_answerable": true,
+      "expected_file": "research-lab-policy.pdf",
+      "expected_page": 1,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 1,
+          "score": 0.7175
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Lab access & safety Northstar Research Lab | Fictional demonstration policy | Version 1.2. The research lab opens Monday through Friday from 9:00 AM to 7:00 PM. Weekend access requires written approval from the lab manager. Before entering the lab, students must complete the safety orientation and register their institute ID card. Visitors must be accompanied by a registered lab member. Food and open drinks are not permitted near workstations. Report equipment faults to the lab manager; do not attempt electrical repairs. The emergency assembly point is the east courtyard. Fictional sample · Page 1 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "ca44a4d7-8836-49b0-80c0-a3b22e73cc97",
+          "filename": "research-lab-policy.pdf",
+          "page": 1,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Lab access & safety Northstar Research Lab | Fictional demonstration policy | Version 1.2. The research lab opens Monday through Friday from 9:00 AM to 7:00 PM. Weekend access requires written approval from the lab manager. Before entering the lab, students must complete the safety orientation and register their institute ID card. Visitors must be accompanied by a registered lab member. Food and open drinks are not permitted near workstations. Report equipment faults to the lab manager; do not attempt electrical repairs. The emergency assembly point is the east courtyard. Fictional sample · Page 1 · Not an official policy",
+          "score": 0.7175
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q12",
+      "question": "How many GPU hours does each student get monthly?",
+      "expected_answerable": true,
+      "expected_file": "research-lab-policy.pdf",
+      "expected_page": 2,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 2,
+          "score": 0.7681
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 2,
+          "score": 0.6236
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Compute resources Each student receives a monthly compute budget of 20 GPU hours. Unused GPU hours do not roll over to the next month. GPU sessions have a maximum duration of 4 hours. Jobs still running at the end of a session are terminated automatically, so save checkpoints to persistent storage. Reserve a GPU workstation through the lab booking portal at least 24 hours before use. Cancel a reservation at least 2 hours in advance to avoid a booking warning. Cryptocurrency mining and hosting public services on lab machines are prohibited. Software that needs administrator access must be installed by lab staff. Fictional sample · Page 2 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "ca44a4d7-8836-49b0-80c0-a3b22e73cc97",
+          "filename": "research-lab-policy.pdf",
+          "page": 2,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Compute resources Each student receives a monthly compute budget of 20 GPU hours. Unused GPU hours do not roll over to the next month. GPU sessions have a maximum duration of 4 hours. Jobs still running at the end of a session are terminated automatically, so save checkpoints to persistent storage. Reserve a GPU workstation through the lab booking portal at least 24 hours before use. Cancel a reservation at least 2 hours in advance to avoid a booking warning. Cryptocurrency mining and hosting public services on lab machines are prohibited. Software that needs administrator access must be installed by lab staff. Fictional sample · Page 2 · Not an official policy",
+          "score": 0.7681
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q13",
+      "question": "What is the maximum duration of a GPU session?",
+      "expected_answerable": true,
+      "expected_file": "research-lab-policy.pdf",
+      "expected_page": 2,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 2,
+          "score": 0.811
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Compute resources Each student receives a monthly compute budget of 20 GPU hours. Unused GPU hours do not roll over to the next month. GPU sessions have a maximum duration of 4 hours. Jobs still running at the end of a session are terminated automatically, so save checkpoints to persistent storage. Reserve a GPU workstation through the lab booking portal at least 24 hours before use. Cancel a reservation at least 2 hours in advance to avoid a booking warning. Cryptocurrency mining and hosting public services on lab machines are prohibited. Software that needs administrator access must be installed by lab staff. Fictional sample · Page 2 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "ca44a4d7-8836-49b0-80c0-a3b22e73cc97",
+          "filename": "research-lab-policy.pdf",
+          "page": 2,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Compute resources Each student receives a monthly compute budget of 20 GPU hours. Unused GPU hours do not roll over to the next month. GPU sessions have a maximum duration of 4 hours. Jobs still running at the end of a session are terminated automatically, so save checkpoints to persistent storage. Reserve a GPU workstation through the lab booking portal at least 24 hours before use. Cancel a reservation at least 2 hours in advance to avoid a booking warning. Cryptocurrency mining and hosting public services on lab machines are prohibited. Software that needs administrator access must be installed by lab staff. Fictional sample · Page 2 · Not an official policy",
+          "score": 0.811
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q14",
+      "question": "How long is project research data retained?",
+      "expected_answerable": true,
+      "expected_file": "research-lab-policy.pdf",
+      "expected_page": 3,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 3,
+          "score": 0.8518
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.7024
+        },
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 2,
+          "score": 0.6689
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 3,
+          "score": 0.6641
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.64
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Research data Student research datasets must be stored in the institute-managed project drive. Personal information must be removed or anonymized before it is uploaded. Confidential research data must not be sent to external AI APIs without written authorization from the data owner. Use synthetic data for public demonstrations. Project data is retained for 90 days after project completion and then deleted. A retention extension requires approval from the research supervisor before the deletion date. Report a suspected data exposure to the lab manager within 24 hours. Public datasets must retain their original license and attribution information. Fictional sample · Page 3 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "ca44a4d7-8836-49b0-80c0-a3b22e73cc97",
+          "filename": "research-lab-policy.pdf",
+          "page": 3,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Research data Student research datasets must be stored in the institute-managed project drive. Personal information must be removed or anonymized before it is uploaded. Confidential research data must not be sent to external AI APIs without written authorization from the data owner. Use synthetic data for public demonstrations. Project data is retained for 90 days after project completion and then deleted. A retention extension requires approval from the research supervisor before the deletion date. Report a suspected data exposure to the lab manager within 24 hours. Public datasets must retain their original license and attribution information. Fictional sample · Page 3 · Not an official policy",
+          "score": 0.8518
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q15",
+      "question": "Can confidential research data be sent to external AI APIs?",
+      "expected_answerable": true,
+      "expected_file": "research-lab-policy.pdf",
+      "expected_page": 3,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 3,
+          "score": 0.7467
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 3,
+          "score": 0.6522
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 3,
+          "score": 0.6411
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Research data Student research datasets must be stored in the institute-managed project drive. Personal information must be removed or anonymized before it is uploaded. Confidential research data must not be sent to external AI APIs without written authorization from the data owner. Use synthetic data for public demonstrations. Project data is retained for 90 days after project completion and then deleted. A retention extension requires approval from the research supervisor before the deletion date. Report a suspected data exposure to the lab manager within 24 hours. Public datasets must retain their original license and attribution information. Fictional sample · Page 3 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "ca44a4d7-8836-49b0-80c0-a3b22e73cc97",
+          "filename": "research-lab-policy.pdf",
+          "page": 3,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Research data Student research datasets must be stored in the institute-managed project drive. Personal information must be removed or anonymized before it is uploaded. Confidential research data must not be sent to external AI APIs without written authorization from the data owner. Use synthetic data for public demonstrations. Project data is retained for 90 days after project completion and then deleted. A retention extension requires approval from the research supervisor before the deletion date. Report a suspected data exposure to the lab manager within 24 hours. Public datasets must retain their original license and attribution information. Fictional sample · Page 3 · Not an official policy",
+          "score": 0.7467
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q16",
+      "question": "How many library books can a student borrow?",
+      "expected_answerable": true,
+      "expected_file": "library-guide.pdf",
+      "expected_page": 1,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "library-guide.pdf",
+          "page": 1,
+          "score": 0.7543
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 3,
+          "score": 0.6632
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 2,
+          "score": 0.6457
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Library hours & borrowing Northstar Library | Fictional demonstration guide | 2026 edition. The library is open Monday through Saturday from 8:00 AM to 9:00 PM. It is closed on Sundays and institute holidays. Students may borrow up to 5 books at a time. The standard loan period is 14 days. A book can be renewed once for another 14 days if no other reader has reserved it. Overdue books incur a charge of 2 credits per book per day. Borrowing privileges are paused when unpaid charges reach 20 credits. Lost books must be replaced or paid for at the listed replacement value. Fictional sample · Page 1 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "a84d2d50-79b7-452b-a7e4-fffca319ff3f",
+          "filename": "library-guide.pdf",
+          "page": 1,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Library hours & borrowing Northstar Library | Fictional demonstration guide | 2026 edition. The library is open Monday through Saturday from 8:00 AM to 9:00 PM. It is closed on Sundays and institute holidays. Students may borrow up to 5 books at a time. The standard loan period is 14 days. A book can be renewed once for another 14 days if no other reader has reserved it. Overdue books incur a charge of 2 credits per book per day. Borrowing privileges are paused when unpaid charges reach 20 credits. Lost books must be replaced or paid for at the listed replacement value. Fictional sample · Page 1 · Not an official policy",
+          "score": 0.7543
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q17",
+      "question": "How long can a group study room be booked per day?",
+      "expected_answerable": true,
+      "expected_file": "library-guide.pdf",
+      "expected_page": 2,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "library-guide.pdf",
+          "page": 2,
+          "score": 0.867
+        },
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 2,
+          "score": 0.6932
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 1,
+          "score": 0.651
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 3,
+          "score": 0.6428
+        },
+        {
+          "file": "student-handbook.pdf",
+          "page": 2,
+          "score": 0.6289
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Study rooms & accessibility Group study rooms can be booked for up to 2 hours per day. Each room accommodates up to 6 people. Bookings are made through the library portal. A booking is released if no one arrives within 15 minutes of the scheduled start. Quiet study desks are available without a reservation on the second floor. Accessible workstations with screen readers are on the ground floor. Students can request accessible copies of course readings from the library help desk. Requests normally take 3 working days. Fictional sample · Page 2 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "a84d2d50-79b7-452b-a7e4-fffca319ff3f",
+          "filename": "library-guide.pdf",
+          "page": 2,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Study rooms & accessibility Group study rooms can be booked for up to 2 hours per day. Each room accommodates up to 6 people. Bookings are made through the library portal. A booking is released if no one arrives within 15 minutes of the scheduled start. Quiet study desks are available without a reservation on the second floor. Accessible workstations with screen readers are on the ground floor. Students can request accessible copies of course readings from the library help desk. Requests normally take 3 working days. Fictional sample · Page 2 · Not an official policy",
+          "score": 0.867
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q18",
+      "question": "What is required to access digital journals off campus?",
+      "expected_answerable": true,
+      "expected_file": "library-guide.pdf",
+      "expected_page": 3,
+      "retrieval_hit_at_5": true,
+      "retrieved": [
+        {
+          "file": "library-guide.pdf",
+          "page": 3,
+          "score": 0.7521
+        },
+        {
+          "file": "library-guide.pdf",
+          "page": 2,
+          "score": 0.6495
+        },
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 3,
+          "score": 0.6375
+        },
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 1,
+          "score": 0.6253
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Digital resources & help Off-campus access to digital journals requires an institute account and multi-factor authentication. Sign in through the library portal before opening a journal link. The library offers a research-skills workshop every Thursday at 4:00 PM. Workshops cover literature search, citation management, and identifying reliable sources. Research consultations can be booked by emailing library-help@example.org. The help desk responds within 2 working days. This address is fictional and must not be used for actual requests. Interlibrary loan requests are limited to 3 active requests per student. Delivery times depend on the lending institution and are not guaranteed. Fictional sample · Page 3 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "a84d2d50-79b7-452b-a7e4-fffca319ff3f",
+          "filename": "library-guide.pdf",
+          "page": 3,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Digital resources & help Off-campus access to digital journals requires an institute account and multi-factor authentication. Sign in through the library portal before opening a journal link. The library offers a research-skills workshop every Thursday at 4:00 PM. Workshops cover literature search, citation management, and identifying reliable sources. Research consultations can be booked by emailing library-help@example.org. The help desk responds within 2 working days. This address is fictional and must not be used for actual requests. Interlibrary loan requests are limited to 3 active requests per student. Delivery times depend on the lending institution and are not guaranteed. Fictional sample · Page 3 · Not an official policy",
+          "score": 0.7521
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q19",
+      "question": "What is the cafeteria menu for next Tuesday?",
+      "expected_answerable": false,
+      "expected_file": null,
+      "expected_page": null,
+      "retrieval_hit_at_5": null,
+      "retrieved": [],
+      "answer": "I couldn't find enough evidence in the selected documents to answer that question.",
+      "answerable": false,
+      "citations": [],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q20",
+      "question": "Who won the football world cup in 2018?",
+      "expected_answerable": false,
+      "expected_file": null,
+      "expected_page": null,
+      "retrieval_hit_at_5": null,
+      "retrieved": [],
+      "answer": "I couldn't find enough evidence in the selected documents to answer that question.",
+      "answerable": false,
+      "citations": [],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q21",
+      "question": "What is the campus parking permit price?",
+      "expected_answerable": false,
+      "expected_file": null,
+      "expected_page": null,
+      "retrieval_hit_at_5": null,
+      "retrieved": [],
+      "answer": "I couldn't find enough evidence in the selected documents to answer that question.",
+      "answerable": false,
+      "citations": [],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q22",
+      "question": "What brand of GPU does the research lab use?",
+      "expected_answerable": false,
+      "expected_file": null,
+      "expected_page": null,
+      "retrieval_hit_at_5": null,
+      "retrieved": [
+        {
+          "file": "research-lab-policy.pdf",
+          "page": 2,
+          "score": 0.7105
+        }
+      ],
+      "answer": "Closest source passage (not a generated answer):\n\nNORTHSTAR / DEMO DOCUMENT Compute resources Each student receives a monthly compute budget of 20 GPU hours. Unused GPU hours do not roll over to the next month. GPU sessions have a maximum duration of 4 hours. Jobs still running at the end of a session are terminated automatically, so save checkpoints to persistent storage. Reserve a GPU workstation through the lab booking portal at least 24 hours before use. Cancel a reservation at least 2 hours in advance to avoid a booking warning. Cryptocurrency mining and hosting public services on lab machines are prohibited. Software that needs administrator access must be installed by lab staff. Fictional sample · Page 2 · Not an official policy [1]",
+      "answerable": null,
+      "citations": [
+        {
+          "number": 1,
+          "document_id": "ca44a4d7-8836-49b0-80c0-a3b22e73cc97",
+          "filename": "research-lab-policy.pdf",
+          "page": 2,
+          "quote": "NORTHSTAR / DEMO DOCUMENT Compute resources Each student receives a monthly compute budget of 20 GPU hours. Unused GPU hours do not roll over to the next month. GPU sessions have a maximum duration of 4 hours. Jobs still running at the end of a session are terminated automatically, so save checkpoints to persistent storage. Reserve a GPU workstation through the lab booking portal at least 24 hours before use. Cancel a reservation at least 2 hours in advance to avoid a booking warning. Cryptocurrency mining and hosting public services on lab machines are prohibited. Software that needs administrator access must be installed by lab staff. Fictional sample · Page 2 · Not an official policy",
+          "score": 0.7105
+        }
+      ],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q23",
+      "question": "What is the librarian's personal phone number?",
+      "expected_answerable": false,
+      "expected_file": null,
+      "expected_page": null,
+      "retrieval_hit_at_5": null,
+      "retrieved": [],
+      "answer": "I couldn't find enough evidence in the selected documents to answer that question.",
+      "answerable": false,
+      "citations": [],
+      "generation_check_passed": null
+    },
+    {
+      "id": "q24",
+      "question": "What scholarship amount is available for the certificate?",
+      "expected_answerable": false,
+      "expected_file": null,
+      "expected_page": null,
+      "retrieval_hit_at_5": null,
+      "retrieved": [],
+      "answer": "I couldn't find enough evidence in the selected documents to answer that question.",
+      "answerable": false,
+      "citations": [],
+      "generation_check_passed": null
+    }
+  ]
+}

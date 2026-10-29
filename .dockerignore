@@ -1,0 +1,9 @@
+**
+!pyproject.toml
+!uv.lock
+!app/
+!app/*.py
+!static/
+!static/**
+!samples/
+!samples/*.pdf

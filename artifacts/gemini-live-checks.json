@@ -1,0 +1,43 @@
+{
+  "base_url": "https://margin-rag.vercel.app",
+  "mode": "gemini",
+  "existing_documents_preserved": true,
+  "deployment_id": "dpl_9TAT3gXbCg82sgnTFuxzud41uJRe",
+  "checks": [
+    {
+      "question": "When is the capstone submission deadline?",
+      "expected_answerable": true,
+      "result": {
+        "answer": "The capstone submission deadline is 23 October 2026 at 5:00 PM. [1]",
+        "answerable": true,
+        "citations": [
+          {
+            "number": 1,
+            "document_id": "baa008e8-6aa3-4775-b143-ee7357a1070f",
+            "filename": "student-handbook.pdf",
+            "page": 3,
+            "quote": "The capstone submission deadline is 23 October 2026 at 5:00 PM.",
+            "score": 0.8442
+          }
+        ],
+        "mode": "gemini",
+        "retrieved": 3,
+        "elapsed_ms": 2327
+      }
+    },
+    {
+      "question": "What brand of GPU does the research lab use?",
+      "expected_answerable": false,
+      "result": {
+        "answer": "I couldn't find enough evidence in the selected documents to answer that question.",
+        "answerable": false,
+        "citations": [],
+        "mode": "gemini",
+        "retrieved": 1,
+        "elapsed_ms": 992
+      }
+    }
+  ],
+  "evaluation": "evaluation/gemini-results.json",
+  "initial_probe_note": "One initial supported-question probe failed provider-response handling; a follow-up and the complete 24-case run passed."
+}

@@ -1,0 +1,11 @@
+{
+  "checks": 20,
+  "errors": [],
+  "screenshots": "C:/RAG-Chatbot/docs/screenshots",
+  "viewports": [
+    1440,
+    820,
+    390
+  ],
+  "base": "http://127.0.0.1:8000"
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "id": "q01",
+    "question": "How long is the Applied AI certificate?",
+    "answerable": true,
+    "expected_file": "student-handbook.pdf",
+    "expected_page": 1,
+    "expected_phrase": "12 weeks"
+  },
+  {
+    "id": "q02",
+    "question": "What attendance is needed to qualify for the certificate?",
+    "answerable": true,
+    "expected_file": "student-handbook.pdf",
+    "expected_page": 1,
+    "expected_phrase": "80 percent"
+  },
+  {
+    "id": "q03",
+    "question": "When does enrollment close?",
+    "answerable": true,
+    "expected_file": "student-handbook.pdf",
+    "expected_page": 1,
+    "expected_phrase": "24 July 2026"
+  },
+  {
+    "id": "q04",
+    "question": "How much of the final grade is the capstone worth?",
+    "answerable": true,
+    "expected_file": "student-handbook.pdf",
+    "expected_page": 2,
+    "expected_phrase": "50 percent"
+  },
+  {
+    "id": "q05",
+    "question": "What is the minimum passing grade?",
+    "answerable": true,
+    "expected_file": "student-handbook.pdf",
+    "expected_page": 2,
+    "expected_phrase": "60 percent"
+  },
+  {
+    "id": "q06",
+    "question": "When must an assignment extension be requested?",
+    "answerable": true,
+    "expected_file": "student-handbook.pdf",
+    "expected_page": 2,
+    "expected_phrase": "48 hours"
+  },
+  {
+    "id": "q07",
+    "question": "When is the capstone submission deadline?",
+    "answerable": true,
+    "expected_file": "student-handbook.pdf",
+    "expected_page": 3,
+    "expected_phrase": "23 October 2026"
+  },
+  {
+    "id": "q08",
+    "question": "How many students can be on a capstone team?",
+    "answerable": true,
+    "expected_file": "student-handbook.pdf",
+    "expected_page": 3,
+    "expected_phrase": "three students"
+  },
+  {
+    "id": "q09",
+    "question": "How long can the capstone demonstration video be?",
+    "answerable": true,
+    "expected_file": "student-handbook.pdf",
+    "expected_page": 3,
+    "expected_phrase": "5 minutes"
+  },
+  {
+    "id": "q10",
+    "question": "What are the research lab opening hours?",
+    "answerable": true,
+    "expected_file": "research-lab-policy.pdf",
+    "expected_page": 1,
+    "expected_phrase": "9:00 AM to 7:00 PM"
+  },
+  {
+    "id": "q11",
+    "question": "Where is the lab emergency assembly point?",
+    "answerable": true,
+    "expected_file": "research-lab-policy.pdf",
+    "expected_page": 1,
+    "expected_phrase": "east courtyard"
+  },
+  {
+    "id": "q12",
+    "question": "How many GPU hours does each student get monthly?",
+    "answerable": true,
+    "expected_file": "research-lab-policy.pdf",
+    "expected_page": 2,
+    "expected_phrase": "20 GPU hours"
+  },
+  {
+    "id": "q13",
+    "question": "What is the maximum duration of a GPU session?",
+    "answerable": true,
+    "expected_file": "research-lab-policy.pdf",
+    "expected_page": 2,
+    "expected_phrase": "4 hours"
+  },
+  {
+    "id": "q14",
+    "question": "How long is project research data retained?",
+    "answerable": true,
+    "expected_file": "research-lab-policy.pdf",
+    "expected_page": 3,
+    "expected_phrase": "90 days"
+  },
+  {
+    "id": "q15",
+    "question": "Can confidential research data be sent to external AI APIs?",
+    "answerable": true,
+    "expected_file": "research-lab-policy.pdf",
+    "expected_page": 3,
+    "expected_phrase": "written authorization"
+  },
+  {
+    "id": "q16",
+    "question": "How many library books can a student borrow?",
+    "answerable": true,
+    "expected_file": "library-guide.pdf",
+    "expected_page": 1,
+    "expected_phrase": "5 books"
+  },
+  {
+    "id": "q17",
+    "question": "How long can a group study room be booked per day?",
+    "answerable": true,
+    "expected_file": "library-guide.pdf",
+    "expected_page": 2,
+    "expected_phrase": "2 hours"
+  },
+  {
+    "id": "q18",
+    "question": "What is required to access digital journals off campus?",
+    "answerable": true,
+    "expected_file": "library-guide.pdf",
+    "expected_page": 3,
+    "expected_phrase": "multi-factor authentication"
+  },
+  {
+    "id": "q19",
+    "question": "What is the cafeteria menu for next Tuesday?",
+    "answerable": false,
+    "expected_file": null,
+    "expected_page": null,
+    "expected_phrase": null
+  },
+  {
+    "id": "q20",
+    "question": "Who won the football world cup in 2018?",
+    "answerable": false,
+    "expected_file": null,
+    "expected_page": null,
+    "expected_phrase": null
+  },
+  {
+    "id": "q21",
+    "question": "What is the campus parking permit price?",
+    "answerable": false,
+    "expected_file": null,
+    "expected_page": null,
+    "expected_phrase": null
+  },
+  {
+    "id": "q22",
+    "question": "What brand of GPU does the research lab use?",
+    "answerable": false,
+    "expected_file": null,
+    "expected_page": null,
+    "expected_phrase": null
+  },
+  {
+    "id": "q23",
+    "question": "What is the librarian's personal phone number?",
+    "answerable": false,
+    "expected_file": null,
+    "expected_page": null,
+    "expected_phrase": null
+  },
+  {
+    "id": "q24",
+    "question": "What scholarship amount is available for the certificate?",
+    "answerable": false,
+    "expected_file": null,
+    "expected_page": null,
+    "expected_phrase": null
+  }
+]

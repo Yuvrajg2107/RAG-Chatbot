@@ -1,0 +1,13 @@
+**
+!app
+!app/*.py
+!static
+!static/**
+!samples
+!samples/*.pdf
+!scripts
+!scripts/prepare_model.py
+!pyproject.toml
+!uv.lock
+!.python-version
+!vercel.json
