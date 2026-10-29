@@ -112,6 +112,7 @@ def throttle(owner):
 class Question(BaseModel):
     question: str = Field(min_length=3, max_length=1000)
     document_ids: list[str] = Field(default_factory=list, max_length=20)
+    retrieval_limit: int = Field(default=5, ge=1, le=10, strict=True)
 
     @field_validator("question")
     @classmethod
@@ -240,7 +241,7 @@ def chat(question: Question, request: Request):
                 404, "A selected document is no longer available in this workspace."
             )
         chunks = store.get_chunks(request.state.owner, question.document_ids)
-        passages = rag.retrieve(question.question, chunks)
+        passages = rag.retrieve(question.question, chunks, limit=question.retrieval_limit)
         result = rag.answer(question.question, passages)
         return result | {
             "retrieved": len(passages),

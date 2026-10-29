@@ -10,7 +10,8 @@ body {
 }
 button,
 textarea,
-input {
+input,
+select {
   font: inherit;
 }
 button,
@@ -29,12 +30,14 @@ button:disabled {
 button,
 a,
 textarea,
+select,
 .upload-zone {
   outline-offset: 4px;
 }
 button:focus-visible,
 a:focus-visible,
 textarea:focus-visible,
+select:focus-visible,
 .upload-zone:focus-within {
   outline: 2px solid var(--green);
 }
@@ -607,15 +610,51 @@ h1 em {
   width: 100%;
   margin: 0 auto;
 }
+.composer-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin: 0 2px 6px;
+}
+.passage-limit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.passage-limit select {
+  min-width: 58px;
+  min-height: 36px;
+  padding: 5px 8px;
+  border: 1px solid #cfd5c8;
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+}
+.passage-limit select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.retrieval-hint {
+  margin: 0 2px 9px;
+  font-size: 10px;
+  color: var(--muted);
+}
 .scope-line {
   font-size: 10px;
   display: flex;
   align-items: center;
   gap: 6px;
-  margin: 0 2px 9px;
+  flex: 1 1 200px;
   color: var(--muted);
 }
 .scope-line svg {
+  flex-shrink: 0;
   width: 13px;
   height: 13px;
 }

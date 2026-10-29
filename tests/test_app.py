@@ -132,6 +132,41 @@ def test_invalid_questions(client, body):
     assert client.post("/api/chat", json=body).status_code == 422
 
 
+@pytest.mark.parametrize("limit", [0, -1, 11, 1.5, True, "5", None])
+def test_invalid_retrieval_limits(client, limit):
+    response = client.post(
+        "/api/chat", json={"question": "When does it open?", "retrieval_limit": limit}
+    )
+    assert response.status_code == 422
+
+
+@pytest.mark.parametrize("limit,expected", [(None, 5), (1, 1), (5, 5), (10, 10)])
+def test_chat_applies_retrieval_limit(client, monkeypatch, limit, expected):
+    content = io.BytesIO()
+    document = canvas.Canvas(content)
+    for page in range(12):
+        document.drawString(30, 760, f"Library policy on page {page + 1}: opens at 8 AM.")
+        document.showPage()
+    document.save()
+    doc = upload(client, content.getvalue()).json()["document"]
+    body = {"question": "When does the library open?", "document_ids": [doc["id"]]}
+    if limit is not None:
+        body["retrieval_limit"] = limit
+    received = []
+    original_answer = rag.answer
+
+    def capture_answer(question, passages):
+        received.extend(passages)
+        return original_answer(question, passages)
+
+    monkeypatch.setattr(rag, "answer", capture_answer)
+    response = client.post("/api/chat", json=body)
+    assert response.status_code == 200
+    assert response.json()["retrieved"] == expected
+    assert len(received) == expected
+    assert {passage["document_id"] for passage in received} == {doc["id"]}
+
+
 def test_security_headers_and_origin(client):
     response = client.get("/")
     assert response.status_code == 200

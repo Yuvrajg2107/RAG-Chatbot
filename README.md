@@ -56,6 +56,10 @@ Questions and retrieved passages are sent to Google only when a key is configure
 
 Every question is independent. Earlier messages stay on screen for convenience but are **not sent as conversational history**, so include the subject in follow-up questions.
 
+Use **Max passages** above the question box to choose a retrieval limit from **1 to 10** (default **5**). It applies to the next question, including suggested questions. Fewer passages may be returned if fewer meet the relevance threshold. More passages can add context but also increase answer time and Gemini input usage. In local evidence mode, only the best passage is displayed, even when several are retrieved.
+
+API clients can include `retrieval_limit` in `POST /api/chat`, for example `{"question":"How many books can I borrow?","retrieval_limit":10}`. Omitting it keeps the default of 5; values must be integers from 1 to 10.
+
 ## How it works
 
 ```text
@@ -68,7 +72,7 @@ PDF upload
 Question + selected document IDs
   -> local query embedding
   -> exact cosine search over the workspace's selected documents
-  -> up to 5 passages above the similarity gate
+  -> up to the chosen passage limit above the similarity gate (1–10, default 5)
   -> Gemini grounded claims OR verbatim local evidence
   -> answer + filename, page, quote, similarity, original PDF download
 ```

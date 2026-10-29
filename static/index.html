@@ -217,12 +217,32 @@
               ></div>
             </div>
             <div class="composer-area">
-              <div class="scope-line">
-                <svg><use href="#i-doc" /></svg
-                ><span id="scope-label"
-                  >Add a PDF or load the sample workspace to begin</span
-                >
+              <div class="composer-controls">
+                <div class="scope-line">
+                  <svg><use href="#i-doc" /></svg
+                  ><span id="scope-label"
+                    >Add a PDF or load the sample workspace to begin</span
+                  >
+                </div>
+                <div class="passage-limit">
+                  <label for="retrieval-limit">Max passages</label>
+                  <select id="retrieval-limit" aria-describedby="retrieval-hint">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
               </div>
+              <p id="retrieval-hint" class="retrieval-hint">
+                Fewer passages may qualify. More passages can increase answer time and API usage.
+              </p>
               <form id="chat-form" class="composer">
                 <label class="visually-hidden" for="question"
                   >Ask a question about your documents</label

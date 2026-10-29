@@ -52,7 +52,7 @@ function toast(message) {
 
 function setBusy(busy) {
   state.busy = busy;
-  for (const id of ["demo-button", "new-chat", "add-document", "file-input"])
+  for (const id of ["demo-button", "new-chat", "add-document", "file-input", "retrieval-limit"])
     $(id).disabled = busy;
   document
     .querySelectorAll(".document-row input, .delete-document, .suggestion")
@@ -262,6 +262,7 @@ async function askQuestion(question) {
   if (state.busy || state.selected.size === 0 || question.trim().length < 3)
     return;
   const documentIds = [...state.selected];
+  const retrievalLimit = Number($("retrieval-limit").value);
   $("welcome").hidden = true;
   setSidebarOpen(false);
   $("question").value = "";
@@ -276,7 +277,7 @@ async function askQuestion(question) {
     const result = await api("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question, document_ids: documentIds }),
+      body: JSON.stringify({ question, document_ids: documentIds, retrieval_limit: retrievalLimit }),
     });
     pending.querySelector(".message-body").textContent = result.answer;
     const meta = element("div", "answer-meta");
